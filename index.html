@@ -15,11 +15,18 @@
 
     <main class="container">
 
+        <!-- BOTÃO VOLTAR -->
+        <button type="button" id="back-button" hidden>
+            ← VOLTAR
+        </button>
+
+        <!-- CABEÇALHO -->
         <header>
             <h1>REFLEXO ARCADE</h1>
             <p>TESTE SUA VELOCIDADE!</p>
         </header>
 
+        <!-- PONTUAÇÃO -->
         <section class="stats">
 
             <div class="stat-box">
@@ -39,10 +46,10 @@
 
         </section>
 
+        <!-- ÁREA DO JOGO -->
         <section class="game-area" id="game-area">
 
             <!-- TELA INICIAL -->
-
             <div class="start-screen" id="start-screen">
 
                 <h2>READY PLAYER?</h2>
@@ -53,19 +60,35 @@
 
                 <div class="difficulty-options">
 
-                    <button type="button" class="difficulty" data-speed="1500">
+                    <button
+                        type="button"
+                        class="difficulty"
+                        data-speed="1500"
+                        aria-pressed="false">
                         FÁCIL
                     </button>
 
-                    <button type="button" class="difficulty selected" data-speed="1000">
+                    <button
+                        type="button"
+                        class="difficulty selected"
+                        data-speed="900"
+                        aria-pressed="true">
                         MÉDIO
                     </button>
 
-                    <button type="button" class="difficulty" data-speed="500">
+                    <button
+                        type="button"
+                        class="difficulty"
+                        data-speed="400"
+                        aria-pressed="false">
                         DIFÍCIL
                     </button>
 
                 </div>
+
+                <p id="difficulty-status">
+                    ✓ Dificuldade selecionada: MÉDIO
+                </p>
 
                 <button type="button" id="start-button">
                     INICIAR JOGO
@@ -73,14 +96,16 @@
 
             </div>
 
-            <!-- ALVO DO JOGO -->
-
-            <button type="button" class="target" id="target" hidden>
+            <!-- ALVO -->
+            <button
+                type="button"
+                class="target"
+                id="target"
+                hidden>
                 ⚡
             </button>
 
             <!-- TELA FINAL -->
-
             <div class="end-screen" id="end-screen" hidden>
 
                 <h2>GAME OVER!</h2>
@@ -97,6 +122,7 @@
 
         </section>
 
+        <!-- RODAPÉ -->
         <footer>
             <p>ARCADE 2026 • INSERT COIN TO PLAY</p>
         </footer>
