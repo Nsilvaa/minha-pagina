@@ -1,19 +1,110 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Minha primeira página no ar</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reflexo Arcade</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Minha primeira página no ar</h1>
-  <p>Feita em HTML, CSS e JavaScript.</p>
 
-  <p id="lampada" class="lampada">🌑</p>
-  <button id="interruptor" type="button">Ligar</button>
-  <p id="aviso">Luz apagada. Clique para acender.</p>
+    <main class="container">
 
-  <script src="script.js"></script>
+        <header>
+            <h1>REFLEXO ARCADE</h1>
+            <p>TESTE SUA VELOCIDADE!</p>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-box">
+                <span>PONTUAÇÃO</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>TEMPO</span>
+                <strong id="time">30</strong>
+            </div>
+
+            <div class="stat-box">
+                <span>RECORDE</span>
+                <strong id="record">0</strong>
+            </div>
+
+        </section>
+
+        <section class="game-area" id="game-area">
+
+            <!-- TELA INICIAL -->
+
+            <div class="start-screen" id="start-screen">
+
+                <h2>READY PLAYER?</h2>
+
+                <p>Clique nos alvos antes que o tempo acabe!</p>
+
+                <h3>ESCOLHA A DIFICULDADE</h3>
+
+                <div class="difficulty-options">
+
+                    <button type="button" class="difficulty" data-speed="1500">
+                        FÁCIL
+                    </button>
+
+                    <button type="button" class="difficulty selected" data-speed="1000">
+                        MÉDIO
+                    </button>
+
+                    <button type="button" class="difficulty" data-speed="500">
+                        DIFÍCIL
+                    </button>
+
+                </div>
+
+                <button type="button" id="start-button">
+                    INICIAR JOGO
+                </button>
+
+            </div>
+
+            <!-- ALVO DO JOGO -->
+
+            <button type="button" class="target" id="target" hidden>
+                ⚡
+            </button>
+
+            <!-- TELA FINAL -->
+
+            <div class="end-screen" id="end-screen" hidden>
+
+                <h2>GAME OVER!</h2>
+
+                <p>Sua pontuação foi:</p>
+
+                <strong id="final-score">0</strong>
+
+                <button type="button" id="restart-button">
+                    JOGAR NOVAMENTE
+                </button>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>ARCADE 2026 • INSERT COIN TO PLAY</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

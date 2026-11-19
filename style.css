@@ -1,31 +1,194 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  max-width: 480px;
-  margin: 24px auto;
-  padding: 0 16px;
-  text-align: center;
-  background: #1d1f24;
-  color: #e8e8e8;
-  transition: background 0.4s;
+    background: #10051f;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-/* quando a luz acende, o body ganha a classe "acesa" */
-body.acesa {
-  background: #fff7d1;
-  color: #2a2200;
+.container {
+    width: 100%;
+    max-width: 750px;
+    background: #1b0b30;
+    border: 3px solid #ff00cc;
+    border-radius: 15px;
+    padding: 30px;
+
+    box-shadow: 0 0 25px #ff00cc;
 }
 
-.lampada {
-  font-size: 80px;
-  margin: 16px 0;
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 23px;
+    line-height: 1.8;
+    color: #00ffff;
+    text-shadow: 0 0 15px #00ffff;
+}
+
+header p {
+    color: #ffcc00;
+    font-size: 13px;
+    margin-top: 10px;
+    letter-spacing: 3px;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    flex: 1;
+    text-align: center;
+    background: #291447;
+    padding: 15px 5px;
+    border: 2px solid #7b2cff;
+    border-radius: 10px;
+}
+
+.stat-box span {
+    display: block;
+    color: #ff00cc;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.stat-box strong {
+    color: #00ffff;
+    font-size: 27px;
+}
+
+.game-area {
+    height: 350px;
+    background: #10051f;
+    border: 3px dashed #7b2cff;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.start-screen,
+.end-screen {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.start-screen h2,
+.end-screen h2 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ffcc00;
+}
+
+.start-screen p,
+.end-screen p {
+    color: #c9b9dc;
+    font-size: 14px;
 }
 
 button {
-  padding: 10px 24px;
-  border: none;
-  border-radius: 8px;
-  background: #f7df1e;
-  color: #1d1f24;
-  font-size: 16px;
-  cursor: pointer;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#start-button,
+#restart-button {
+    padding: 15px 25px;
+    background: #ff00cc;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+button:hover {
+    transform: scale(1.07);
+    filter: brightness(1.2);
+}
+
+.target {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #ff00cc;
+    color: white;
+    font-size: 30px;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 20px #ff00cc;
+}
+
+.target:active {
+    transform: scale(0.85);
+}
+
+.end-screen strong {
+    color: #00ffff;
+    font-size: 50px;
+}
+
+footer {
+    text-align: center;
+    color: #8c73a8;
+    font-size: 11px;
+    margin-top: 25px;
+    letter-spacing: 2px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 15px;
+    }
+
+    .stats {
+        gap: 7px;
+    }
+
+    .stat-box span {
+        font-size: 9px;
+    }
+
+    .stat-box strong {
+        font-size: 21px;
+    }
+
+    .game-area {
+        height: 320px;
+    }
 }
